@@ -2,4 +2,4 @@
 New and updated google maps API test
 
 ## Live Demo
-Live demo for the site can soon be found on ...
+Live demo for the site can soon be found on http://elixir7.github.io/
