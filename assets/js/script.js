@@ -12,11 +12,13 @@ $("#menu-button").click(function(){
 //Since id is needed to be found and id can't be used twice, the mobile menu buttons click the real buttons.
 $("#mobile-btn-drop").click(function(){
   $("#btn-drop").click();
+  API.close();
 });
 
 //Since id is needed to be found and id can't be used twice, the mobile menu buttons click the real buttons.
 $("#mobile-btn-reload").click(function(){
   $("#btn-reload").click();
+  API.close();
 });
 
 //1. Skapa en karta OK
