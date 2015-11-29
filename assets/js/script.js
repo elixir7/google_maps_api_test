@@ -41,7 +41,7 @@ function initMap() {
 	//Create map object
   var map = new google.maps.Map(document.getElementById('map'), {
     center: {lat: -34.397, lng: 150.644},
-    zoom: 7,
+    zoom: 5,
     mapTypeId: google.maps.MapTypeId.SATELLITE,
     streetViewControl: false
   });
@@ -113,9 +113,15 @@ function initMap() {
     var lat_lng_log = document.getElementById('current');
 	  lat_lng_log.innerHTML = '<p>Latitude: <b>' + evt.latLng.lat().toFixed(3) + '</b></p><p>Longitude: <b>' + evt.latLng.lng().toFixed(3) + '</b></p>';
 
+    var lat_lng_log2 = document.getElementById('current2');
+    lat_lng_log2.innerHTML = '<p>Latitude: <b>' + evt.latLng.lat().toFixed(3) + '</b></p><p>Longitude: <b>' + evt.latLng.lng().toFixed(3) + '</b></p>';
+
 	  var distance_log = document.getElementById('distance');
     var distanceBetween = getDistance(homeMarker.position, myMarker.position);
     distance_log.innerHTML = distanceBetween + "m";
+
+    var distance_log2 = document.getElementById('distance2');
+    distance_log2.innerHTML = distanceBetween + "m";
 
     if(distanceBetween < 500){
       var color;
