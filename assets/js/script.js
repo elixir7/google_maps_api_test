@@ -1,5 +1,24 @@
 $( document ).ready(function() {
+//Startar Kartan
 initMap();
+
+//Startar Off screen mmenu
+$("#my-menu").mmenu();
+var API = $("#my-menu").data("mmenu");
+$("#menu-button").click(function(){
+  API.open();
+});
+
+//Since id is needed to be found and id can't be used twice, the mobile menu buttons click the real buttons.
+$("#mobile-btn-drop").click(function(){
+  $("#btn-drop").click();
+});
+
+//Since id is needed to be found and id can't be used twice, the mobile menu buttons click the real buttons.
+$("#mobile-btn-reload").click(function(){
+  $("#btn-reload").click();
+});
+
 //1. Skapa en karta OK
 //2. Hitta användarens position OK
 	//2.1 Sätt ut en marker på positionen OK
